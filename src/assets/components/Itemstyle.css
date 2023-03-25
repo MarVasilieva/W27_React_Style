@@ -5,8 +5,9 @@
     display: flex;
     flex-direction: column;
     box-shadow: 5px 5px 9px 0px rgba(34, 60, 80, 0.2);
+    border: 2px solid rgb(235, 232, 226);
 }
-.itemsTariffname{
+.items-tariffname{
     height: 164x;
     font-size: 32px;
     color: rgb(223, 221, 217) ;

@@ -1,4 +1,4 @@
-import "./App.css";
+import styles from "./App.css";
 import React from "react";
 import Item from "./assets/components/Item";
 import green from "./assets/styles/green.css";
@@ -19,14 +19,19 @@ const items = [
 ];
 function App() {
   return (
-    <div className="App">
+    <div className={styles.App}>
       {items.map((item, index) => (
         <Item
           tariffname={item.tariffname}
           price={item.price}
           speed={item.speed}
           isSelected={item.isSelected}
-          theme={index === 3 ? green : red}
+          theme={
+            (index === 1 && green) ||
+            (index === 2 && red) ||
+            (index === 3 && black) ||
+            (index === 0 && blue)
+          }
         ></Item>
       ))}
     </div>
