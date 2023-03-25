@@ -1,4 +1,4 @@
-.items-body{
+.itemsBody{
     width: 395px;
     height: 640px;
     border-radius: 4px;
@@ -6,13 +6,13 @@
     flex-direction: column;
     box-shadow: 5px 5px 9px 0px rgba(34, 60, 80, 0.2);
 }
-.items-tariffname{
+.itemsTariffname{
     height: 164x;
     font-size: 32px;
     color: rgb(223, 221, 217) ;
    
 }
-.items-price{
+.itemsPrice{
     height: 230px;
     font-size: 36px;
     border-top: 2px solid rgb(224, 224, 221);
@@ -22,7 +22,7 @@
     align-items: center;
     gap: 5px;
 }
-.items-speed{
+.itemsSpeed{
     height: 155px;
     background-color: aliceblue;
     color: rgb(126, 127, 129) ;
@@ -32,7 +32,7 @@
     justify-content: center;
     align-items: center;
 }
-.items-footer{
+.itemsFooter{
     height: 155px;
     background-color: rgb(227, 231, 237); 
    display: flex;
