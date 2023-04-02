@@ -2,21 +2,30 @@ import React from "react";
 import itemstyle from "./Itemstyle.css";
 
 class Item extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pressed: false,
+    };
+  }
+  handleChange = () => {
+    this.setState({ pressed: !this.state.pressed });
+  };
   render() {
     const { tariffname, price, speed, isSelected } = this.props;
     const theme = this.props.theme;
 
-    let classitem = "";
     return (
       <div className="items">
         <div
-          className={`${itemstyle.itemsBody} + ${
-            isSelected ? itemstyle.selected : ""
+          onClick={this.handleChange}
+          className={`${itemstyle.itemsBody} ${
+            this.state.pressed ? itemstyle.selected : ""
           }`}
         >
           <div className={theme.body}>
             <div className={`${itemstyle["items-tariffname"]}`}>
-              <h3>{tariffname} </h3>
+              <h3>{tariffname}</h3>
             </div>
             <div className={`${itemstyle.itemsPrice} ${price}`}>
               <p>руб</p> <h1>{price}</h1> /мес
